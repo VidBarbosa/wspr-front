@@ -2,12 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --brand-rgb: 15 23 42;
+body {
+  @apply bg-slate-50 text-slate-900;
 }
-.btn {
-  @apply inline-flex items-center gap-2 rounded-2xl px-4 py-2 border;
-}
-.btn-primary {
-  @apply border-transparent bg-[rgb(var(--brand-rgb))] text-white hover:opacity-90;
+
+/* Componentes personalizados */
+@layer components {
+  .filter-pill {
+    @apply inline-flex items-center gap-1 rounded-full border border-slate-200 bg-slate-50 px-3 py-1.5 text-xs text-slate-600 hover:bg-slate-100;
+  }
+
+  .tab-pill {
+    @apply rounded-full px-4 py-1.5 text-xs font-medium;
+  }
 }

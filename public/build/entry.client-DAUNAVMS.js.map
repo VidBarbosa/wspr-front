@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../app/entry.client.tsx"],
-  "sourcesContent": ["// REMIX HMR BEGIN\nimport * as __hmr__ from \"remix:hmr\";\nif (import.meta) {\nimport.meta.hot = __hmr__.createHotContext(\n//@ts-expect-error\n\"app\\\\entry.client.tsx\"\n);\nimport.meta.hot.lastModified = \"1764285760228.4895\";\n}\n// REMIX HMR END\n\nimport { RemixBrowser } from \"@remix-run/react\";\nimport { startTransition, StrictMode } from \"react\";\nimport { hydrateRoot } from \"react-dom/client\";\n\nfunction registerSW() {\n  if (\"serviceWorker\" in navigator) {\n    window.addEventListener(\"load\", () => {\n      navigator.serviceWorker\n        .register(\"/sw.js\")\n        .catch((err) => console.error(\"SW registration failed\", err));\n    });\n  }\n}\n\nstartTransition(() => {\n  hydrateRoot(\n    document,\n    <StrictMode>\n      <RemixBrowser />\n    </StrictMode>\n  );\n  registerSW();\n});\n"],
-  "mappings": ";;;;;;;;;;;;;;;;;;;;;;AAYA,IAAAA,gBAA4C;AAC5C,oBAA4B;AAgBtB;AA3BN,IAAI,aAAa;AACjB,cAAY,MAAc;AAAA;AAAA,IAE1B;AAAA,EACA;AACA,cAAY,IAAI,eAAe;AAC/B;AAOA,SAAS,aAAa;AACpB,MAAI,mBAAmB,WAAW;AAChC,WAAO,iBAAiB,QAAQ,MAAM;AACpC,gBAAU,cACP,SAAS,QAAQ,EACjB,MAAM,CAAC,QAAQ,QAAQ,MAAM,0BAA0B,GAAG,CAAC;AAAA,IAChE,CAAC;AAAA,EACH;AACF;AAAA,IAEA,+BAAgB,MAAM;AACpB;AAAA,IACE;AAAA,IACA,mDAAC,4BACC,6DAAC,kBAAD;AAAA;AAAA;AAAA;AAAA,WAAc,KADhB;AAAA;AAAA;AAAA;AAAA,WAEA;AAAA,EACF;AACA,aAAW;AACb,CAAC;",
-  "names": ["import_react"]
-}

@@ -1,32 +1,26 @@
 {
   "compilerOptions": {
-    "target": "ES2022",
+    "target": "ESNext",
+    "useDefineForClassFields": true,
     "lib": [
-      "ES2022",
       "DOM",
-      "DOM.Iterable"
+      "DOM.Iterable",
+      "ESNext"
     ],
-    "jsx": "react-jsx",
-    "module": "ESNext",
-    "moduleResolution": "Bundler",
+    "allowJs": false,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
     "strict": true,
-    "baseUrl": ".",
-    "ignoreDeprecations": "6.0",
-    "paths": {
-      "~/*": [
-        "./app/*"
-      ]
-    },
+    "forceConsistentCasingInFileNames": true,
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
     "noEmit": true,
-    "types": [
-      "@remix-run/node",
-      "@remix-run/react"
-    ],
-    "resolveJsonModule": true
+    "jsx": "react-jsx"
   },
   "include": [
-    "app",
-    "remix.config.ts",
-    "vite.config.ts"
+    "app"
   ]
 }
